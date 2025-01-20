@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "vacancysearch1-1000092251-zYj",
-    "name" : "vacancysearch1-1000092251-zYj",
+    "id" : "e-1000091438-Xse",
+    "name" : "e-1000091438-Xse",
     "folder" : "/platform"
   },
   "settings" : {
@@ -24,6 +24,295 @@
     }
   },
   "intents" : [ {
+    "path" : "/Приветствие",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Привет"
+    }, {
+      "text" : "Добрый день"
+    }, {
+      "text" : "Здравствуйте"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/Поиск растений",
+    "description" : "Поиск растений по различным критериям.",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Растение для комнаты"
+    }, {
+      "text" : "Большое"
+    }, {
+      "text" : "Маленькое"
+    }, {
+      "text" : "Недорогое"
+    }, {
+      "text" : "Найти растение по названию"
+    }, {
+      "text" : "Какие растения подходят для тени?"
+    }, {
+      "text" : "Растения, не требующие частого полива"
+    }, {
+      "text" : "Найти растение по недорогой цене"
+    }, {
+      "text" : "Найти растение маленького размера"
+    }, {
+      "text" : "Найти растения большого размера"
+    }, {
+      "text" : "Какие растения подходят для солнца?"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "Имя_растения",
+      "entity" : "Имя_растения",
+      "required" : true,
+      "prompts" : [ ],
+      "array" : false
+    }, {
+      "name" : "Размер",
+      "entity" : "Размер",
+      "required" : true,
+      "prompts" : [ ],
+      "array" : false
+    }, {
+      "name" : "Световые_условия",
+      "entity" : "Световые_условия",
+      "required" : true,
+      "prompts" : [ ],
+      "array" : false
+    }, {
+      "name" : "Температура",
+      "entity" : "Температура",
+      "required" : true,
+      "prompts" : [ ],
+      "array" : false
+    }, {
+      "name" : "Цвет",
+      "entity" : "Цвет",
+      "required" : true,
+      "prompts" : [ ],
+      "array" : false
+    }, {
+      "name" : "Цена",
+      "entity" : "Цена",
+      "required" : true,
+      "prompts" : [ ],
+      "array" : false
+    }, {
+      "name" : "Частота_полива",
+      "entity" : "Частота_полива",
+      "required" : true,
+      "prompts" : [ ],
+      "array" : false
+    } ],
+    "priority" : 0
+  }, {
+    "path" : "/Информация о растении",
+    "description" : "Получение информации о конкретном растении.",
+    "enabled" : false,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Информация о растении"
+    }, {
+      "text" : "Уход за растением"
+    }, {
+      "text" : "Описание растения"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "Имя_растения",
+      "entity" : "Имя_растения",
+      "required" : true,
+      "prompts" : [ ],
+      "array" : false
+    }, {
+      "name" : "Размер",
+      "entity" : "Размер",
+      "required" : true,
+      "prompts" : [ ],
+      "array" : false
+    }, {
+      "name" : "Световые_условия",
+      "entity" : "Световые_условия",
+      "required" : true,
+      "prompts" : [ ],
+      "array" : false
+    }, {
+      "name" : "Температура",
+      "entity" : "Температура",
+      "required" : true,
+      "prompts" : [ ],
+      "array" : false
+    }, {
+      "name" : "Цвет",
+      "entity" : "Цвет",
+      "required" : true,
+      "prompts" : [ ],
+      "array" : false
+    }, {
+      "name" : "Цена",
+      "entity" : "Цена",
+      "required" : true,
+      "prompts" : [ ],
+      "array" : false
+    }, {
+      "name" : "Частота_полива",
+      "entity" : "Частота_полива",
+      "required" : true,
+      "prompts" : [ ],
+      "array" : false
+    } ],
+    "priority" : 0
+  }, {
+    "path" : "/Оформление заказа",
+    "description" : "Оформление заказа на покупку растения.",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Оформление заказа"
+    }, {
+      "text" : "Сделать заказ"
+    }, {
+      "text" : "Купить растение себе"
+    }, {
+      "text" : "Хочу купить растение для бабушки"
+    }, {
+      "text" : "Хочу белый цветок в подарок"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "recipient",
+      "entity" : "Recipient",
+      "required" : true,
+      "prompts" : [ ]
+    } ],
+    "priority" : 0
+  }, {
+    "path" : "/Уточнение цвета",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Я бы хотел красного цвета"
+    }, {
+      "text" : "Красный"
+    }, {
+      "text" : "Желтые"
+    }, {
+      "text" : "Зеленое"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : " Color",
+      "entity" : "Color",
+      "required" : true,
+      "prompts" : [ "Пожалуйста, уточните цвет" ],
+      "array" : true
+    } ],
+    "priority" : 0
+  }, {
+    "path" : "/Подбор растений",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "Цвет",
+      "entity" : "Color",
+      "required" : true,
+      "prompts" : [ ]
+    }, {
+      "name" : "Размер",
+      "entity" : "Size",
+      "required" : true,
+      "prompts" : [ ]
+    }, {
+      "name" : "Тип",
+      "entity" : "Type",
+      "required" : true,
+      "prompts" : [ ]
+    }, {
+      "name" : "Название",
+      "entity" : "Name",
+      "required" : true,
+      "prompts" : [ ]
+    } ],
+    "priority" : 0
+  }, {
+    "path" : "/Обработка ответа",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Я хочу заказать цветок для сына"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "Получатель",
+      "entity" : "Recipient",
+      "required" : true,
+      "prompts" : [ ]
+    } ],
+    "priority" : 0
+  }, {
+    "path" : "/Уточнение размера",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Большой"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "Размер",
+      "entity" : "Размер",
+      "required" : true,
+      "prompts" : [ "Уточните размер растения" ]
+    } ],
+    "priority" : 0
+  }, {
+    "path" : "/Уточнение типа",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Цветок"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "Тип",
+      "entity" : "Type",
+      "required" : true,
+      "prompts" : [ "Пожалуйста, уточните тип растения" ]
+    } ],
+    "priority" : 0
+  }, {
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -109,12 +398,14 @@
       "name" : "City",
       "entity" : "mystem.geo",
       "required" : false,
-      "prompts" : [ ]
+      "prompts" : [ ],
+      "array" : false
     }, {
       "name" : "Profession",
       "entity" : "Профессия",
       "required" : false,
-      "prompts" : [ ]
+      "prompts" : [ ],
+      "array" : false
     } ],
     "priority" : 0
   }, {
@@ -168,7 +459,8 @@
       "name" : "Salary",
       "entity" : "duckling.amount-of-money",
       "required" : false,
-      "prompts" : [ ]
+      "prompts" : [ ],
+      "array" : false
     } ],
     "priority" : 0
   }, {
@@ -194,11 +486,346 @@
       "name" : "Profession",
       "entity" : "Profession",
       "required" : false,
-      "prompts" : [ ]
+      "prompts" : [ ],
+      "array" : false
     } ],
     "priority" : 0
   } ],
   "entities" : [ {
+    "entity" : {
+      "name" : "Color",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "synonyms",
+      "rule" : [ "Белый", "Белая", "Белое", "Белые", "Белого", "Белой", "Белым", "Белыми", "Беленький", "Беленькая", "Беленькое", "Беленькие" ],
+      "value" : "{\n  \"color\": \"Белый\"\n}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Желтый", "Желтая", "Желтое", "Желтые", "Желтого", "Желтой", "Желтым", "Желтыми", "Желтенький", "Желтенькая", "Желтенькое", "Желтенькие" ],
+      "value" : "{\"name\":\"Желтый\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Зеленый", "Зеленая", "Зеленое", "Зеленые", "Зеленого", "Зеленой", "Зеленым", "Зелеными", "Зелененький", "Зелененькая", "Зелененькое", "Зелененькие" ],
+      "value" : "{\"name\":\"Зеленый\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Красный", "Красная", "Красное", "Красные", "Красного", "Красной", "Красным", "Красными", "Красненький", "Красненькая", "Красненькое", "Красненькие", "Краснючий", "Краснючая", "Краснючее", "Краснючие" ],
+      "value" : "{\n  \"color\": \"Красный\"\n}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Розовый", "Розовая", "Розовое", "Розовые", "Розового", "Розовой", "Розовым", "Розовыми", "Розовенький", "Розовенькая", "Розовенькое", "Розовенькие" ],
+      "value" : "{\"name\":\"Розовый\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Синий", "Синяя", "Синее", "Синие", "Синего", "Синей", "Синим", "Синими", "Синенький", "Синенькая", "Синенькое", "Синенькие", "Синюющий", "Синюющая", "Синюющее", "Синюющие" ],
+      "value" : "{\"name\":\"Синий\"}"
+    } ]
+  }, {
+    "entity" : {
+      "name" : "Name",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "synonyms",
+      "rule" : [ "Алоэ" ],
+      "value" : ""
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Папоротник" ],
+      "value" : ""
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Спатифиллум" ],
+      "value" : ""
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Фикус" ],
+      "value" : ""
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Эчеверия" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "name" : "Recipient",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "synonyms",
+      "rule" : [ "Бабушка", "Бабушки", "Бабушке", "Бабушкой", "Бабушек", "бабушке", "бабушек" ],
+      "value" : "{\"name\":\"Бабушка\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Брат", "Братья", "Брату", "Братом", "Братьев" ],
+      "value" : "{\"name\":\"Брат\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Дедушка", "Дедушки", "Дедушке", "Дедушкой", "Дедушек" ],
+      "value" : "{\"name\":\"Дедушка\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Дочь", "Дочери", "Дочерей", "Дочкой", "Дочками" ],
+      "value" : "{\"name\":\"Дочь\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Мама", "Мамы", "Маме", "Мамой", "Мам" ],
+      "value" : "{\"name\":\"Мама\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Отец", "Отецы", "Отцу", "Отцом", "Отцов" ],
+      "value" : "{\"name\":\"Отец\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Сестра", "Сестры", "Сестре", "Сестрой", "Сестёр" ],
+      "value" : "{\"name\":\"Сестра\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Сын", "Сына", "Сыну", "Сыном", "Сыновья", "Сыновей" ],
+      "value" : "{\"name\":\"Сын\"}"
+    } ]
+  }, {
+    "entity" : {
+      "name" : "Size",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "synonyms",
+      "rule" : [ "Большой", "Большая", "Большое", "Большие", "Большущая" ],
+      "value" : "{\"name\":\"Большой\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Маленький", "Маленькая", "Маленькие", "Мелкий", "Мелкая", "Мелкие" ],
+      "value" : "{\"name\":\"Маленький\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Средний", "Средняя", "Средние", "Умеренный", "Умеренная", "Умеренные" ],
+      "value" : "{\"name\":\"Средний\"}"
+    } ]
+  }, {
+    "entity" : {
+      "name" : "Type",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "synonyms",
+      "rule" : [ "Дерево" ],
+      "value" : ""
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Кустарник", "Куст" ],
+      "value" : ""
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Цветок", "цветы", "букет" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "name" : "Описание",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "synonyms",
+      "rule" : [ "Папоротник — тенелюбивое растение, идеально подходящее для помещений с низким уровнем освещенности. Ему требуется высокая влажность и регулярное опрыскивание." ],
+      "value" : ""
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Спатифиллум — элегантное растение с белыми цветами, также известное как \"лилия мира\"" ],
+      "value" : ""
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "суккулент, известный своими лечебными свойствами. Он неприхотлив в уходе, предпочитает яркий свет и редкий полив." ],
+      "value" : ""
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Фикус — популярное комнатное растение, известное своими крупными зелеными листьями. Он предпочитает умеренный свет и регулярный полив." ],
+      "value" : ""
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Эчеверия — еще один популярный суккулент с мясистыми листьями. Она любит яркий свет и умеренный полив." ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "name" : "Световые_условия",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "synonyms",
+      "rule" : [ "Полутень" ],
+      "value" : ""
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Тень" ],
+      "value" : ""
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Умеренные" ],
+      "value" : ""
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Ярко" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "name" : "Температура",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "synonyms",
+      "rule" : [ "Комнатная", "Комнатные", "Комнатному", "Комнатной", "Комнатными" ],
+      "value" : "{\"name\":\"Комнатная\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Прохладная", "Прохладные", "Прохладному", "Прохладной", "Прохладными" ],
+      "value" : "{\"name\":\"Прохладная\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Теплая", "Теплые", "Теплому", "Теплой", "Теплыми" ],
+      "value" : "{\"name\":\"Теплая\"}"
+    } ]
+  }, {
+    "entity" : {
+      "name" : "Цена",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "synonyms",
+      "rule" : [ "1500 руб." ],
+      "value" : ""
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "2500 руб." ],
+      "value" : ""
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "3000 руб." ],
+      "value" : ""
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "5000 руб." ],
+      "value" : ""
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "7000 руб." ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "name" : "Частота_полива",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "synonyms",
+      "rule" : [ "имя" ],
+      "value" : "значение"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Регулярная", "Регулярные", "Регулярному", "Регулярной", "Регулярными" ],
+      "value" : "{\"name\":\"Регулярная\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Редкая", "Редкие", "Редкому", "Редкой", "Редкими" ],
+      "value" : "{\"name\":\"Редкая\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Умеренная", "Умеренные", "Умеренному", "Умеренной", "Умеренными" ],
+      "value" : "{\"name\":\"Умеренная\"}"
+    } ]
+  }, {
     "entity" : {
       "name" : "Profession",
       "enabled" : true,
@@ -686,7 +1313,7 @@
       "value" : ""
     } ]
   } ],
-  "enabledSystemEntities" : [ "mystem.geo", "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url", "duckling.amount-of-money" ],
+  "enabledSystemEntities" : [ "mystem.geo", "duckling.number", "duckling.amount-of-money", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
   "spellerDictionary" : [ ],
   "systemEntities" : [ {
     "name" : "mystem.geo",
@@ -742,6 +1369,10 @@
     "version" : "v2",
     "enabled" : false
   }, {
+    "name" : "duckling.amount-of-money",
+    "version" : "v2",
+    "enabled" : true
+  }, {
     "name" : "duckling.distance",
     "version" : "v2",
     "enabled" : false
@@ -786,10 +1417,6 @@
   }, {
     "name" : "zb.number",
     "enabled" : false
-  }, {
-    "name" : "duckling.amount-of-money",
-    "version" : "v2",
-    "enabled" : true
   } ],
   "faq" : [ ],
   "skills" : [ ]

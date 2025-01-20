@@ -14,23 +14,23 @@ theme: /
         intent: /jobSearch || toState = "/запрос профессии"
         event: noMatch || toState = "./"
 
-    state: запрос города
-        a: В каком городе вы хотите найти работу?
+    state: запрос цвета
+        a: Какого цвет растение вы хотите?
         buttons:
-            "Не указывать" -> /Обновление города
-        intent: /jobRequest || toState = "/Определение города"
+            "Не указывать" -> /запрос размера
+        intent: /Уточнение цвета || toState = "/Определение цвета"
         event: noMatch || toState = "./"
 
-    state: Определение города
-        intent: /jobRequest
+    state: Определение цвета
+        intent: /Уточнение цвета
         script:
-            $session.city = $parseTree._City;
-        if: $session.city == undefined
+            $session.color = $parseTree._Color;
+        if: $session.color == undefined
             a: Я не понял. Вы сказали: {{$request.query}}
-            go!: /запрос города
+            go!: /запрос цвета
         else: 
-            a: ваш город {{$session.city}}
-            go!: /запрос зарплаты
+            a: ваш цвет {{$session.color}}
+            go!: /запрос размера
         event: noMatch || toState = "./"
 
     state: Bye
