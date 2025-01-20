@@ -111,7 +111,7 @@ theme: /
             go!: /запрос профессии
         else: 
             a: Вы выбрали профессию {{$session.profession}}
-            go!: /запрос города
+            go!: /запрос цвета
         event: noMatch || toState = "./"
 
     state: запрос зарплаты
@@ -136,7 +136,7 @@ theme: /
         script:
             $session.profession = $parseTree._Profession;
         if: $session.profession == undefined
-            go!: /запрос города
+            go!: /запрос цвета
 
     state: Обновление города
         script:
