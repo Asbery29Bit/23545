@@ -24,7 +24,7 @@ theme: /
     state: Определение цвета
         intent: /Уточнение цвета
         script:
-            $session.color = $parseTree._Color;
+            $session.color = $parseTree._City;
         if: $session.color == undefined
             a: Я не понял. Вы сказали: {{$request.query}}
             go!: /запрос цвета
